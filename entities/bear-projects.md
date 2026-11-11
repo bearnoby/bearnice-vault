@@ -24,6 +24,7 @@ Snapshot from /me/, saved 2026-11-10:
 ## BearnobyLabs (LinkedIn company page, in progress, 11 Nov 2026)
 - Theme: tools for streamers and creators (Twitch first, then Discord, game design), built with AI. Lead with the flagship, Bearnoby-Tools; its selling point is that it runs locally, not on a third-party site. Three of four projects are AI products (assistant, Bearnadette, CharacterForge). **Bearnoby-Tools is not an AI tool**: built with AI, its only AI integration (ElevenLabs) hasn't shipped. Don't call the whole portfolio "AI tools" until it does.
 - Leading tagline candidate: "Tools for streamers and creators: Twitch overlays, Discord bots, character generators. Built with AI." Not yet chosen by Bear.
+- Bear asked for the tagline options twice on 11 Nov 2026 (12:5x and 13:12): the first set of options got swallowed in delivery. Options re-sent at 13:12.
 
 ## Notes
 <!-- openclaw:human:start -->
