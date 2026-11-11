@@ -1,0 +1,9 @@
+# Machine files. memory-wiki keeps its own run state and recovery copies in .openclaw-wiki/
+# (the nightly workspace backup covers it; `openclaw wiki compile` rebuilds the rest).
+.openclaw-wiki/
+# Obsidian: per-device window state and caches (settings and plugins are fine to share)
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/
+.DS_Store
+Thumbs.db
