@@ -9,7 +9,7 @@ bridgeWorkspaceDir: /home/node/workspaces/assistant
 bridgeAgentIds:
   - assistant
 status: active
-updatedAt: 2026-11-03T12:09:02.173Z
+updatedAt: 2026-11-11T14:46:33.874Z
 ---
 
 # Memory Bridge (assistant): MEMORY
@@ -19,7 +19,7 @@ updatedAt: 2026-11-03T12:09:02.173Z
 - Relative path: `MEMORY.md`
 - Kind: `markdown`
 - Agents: assistant
-- Updated: 2026-11-03T12:09:02.173Z
+- Updated: 2026-11-11T14:46:33.874Z
 
 ## Content
 ```markdown
@@ -78,7 +78,7 @@ Durable facts, preferences and standing decisions only. Volatile state (task cou
 - `travel.json` is the single source of truth; update it when he says he has moved or a booking email makes it clear.
 - Trips need four things: flights, accommodation, ground transfer, return leg. The return is what goes missing.
 - Pre-trip: a nudge **two days before** for hotels and onward tickets, then **several pushes the day before**. Never one reminder.
-- If the timezone changes, move `bearnice-morning-brief` (10:00) and `bearnice-job-scout` (Mon/Wed 10:00) to the new zone. No other jobs.
+- If the timezone changes, follow AGENTS.md section 6 for which jobs to move.
 - Seasonal timetables: check CET/CEST before quoting an arrival, and expect him to hold an old summer-time value.
 
 ## Music & Gigs

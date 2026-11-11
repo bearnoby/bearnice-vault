@@ -9,12 +9,5 @@ status: active
 
 ## Generated
 <!-- openclaw:wiki:lint:start -->
-- Errors: 0
-- Warnings: 1
-
-### Warnings
-- `entities/bear-projects.md`: Non-source page is missing `sourceIds` provenance.
-
-### Quality Follow-Up
-- `entities/bear-projects.md`: Non-source page is missing `sourceIds` provenance.
+No issues found.
 <!-- openclaw:wiki:lint:end -->

@@ -69,4 +69,5 @@ None. Bear opens the page from links in Discord posts and the brief.
 ### Referenced By
 
 - [[entities/systems/systems|Bearnice's systems]]
+- [[syntheses/decision-site-and-shelf|Decision: Bearnice's site and the shelf]]
 <!-- openclaw:wiki:related:end -->

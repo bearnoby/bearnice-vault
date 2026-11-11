@@ -65,6 +65,7 @@ A model run at 10:00 where Bear is: Bearnice reads his day from the systems arou
 ### Referenced By
 
 - [[entities/systems/systems|Bearnice's systems]]
+- [[syntheses/decision-morning-brief-design|Decision: the morning brief]]
 - [[entities/systems/events-radar|System: events radar]]
 - [[entities/systems/gig-radar|System: gig radar]]
 - [[entities/systems/runway|System: runway]]

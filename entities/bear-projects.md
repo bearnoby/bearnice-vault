@@ -3,6 +3,8 @@ pageType: entity
 id: entity.bear-projects
 title: Bear's projects
 entityType: concept
+sourceIds:
+  - site:me/about-me.json
 updatedAt: 2026-11-11T12:00:00.000Z
 ---
 
@@ -36,5 +38,8 @@ Snapshot from /me/, saved 2026-11-10:
 
 ## Related
 <!-- openclaw:wiki:related:start -->
-- No related pages yet.
+### Referenced By
+
+- [[entities/people/bear|Bear]]
+- [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 <!-- openclaw:wiki:related:end -->

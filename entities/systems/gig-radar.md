@@ -71,6 +71,7 @@ Keeps Bear's concert backlog as one living card per band in #gig-radar. A daily 
 ### Referenced By
 
 - [[entities/systems/systems|Bearnice's systems]]
+- [[concepts/gig-taste|Gig taste]]
 - [[entities/systems/events-radar|System: events radar]]
 - [[entities/systems/morning-brief|System: morning brief]]
 - [[entities/systems/runway|System: runway]]

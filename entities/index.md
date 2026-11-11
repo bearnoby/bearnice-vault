@@ -2,8 +2,15 @@
 
 ## Generated
 <!-- openclaw:wiki:entities:index:start -->
+- [[entities/people/bear|Bear]]
 - [[entities/bear-projects|Bear's projects]]
 - [[entities/systems/systems|Bearnice's systems]]
+- [[entities/places/frankfurt-airport|Frankfurt Airport (FRA)]]
+- [[entities/places/heilbronn|Heilbronn]]
+- [[entities/people/kahlua|Kahlua]]
+- [[entities/people/layla|Layla]]
+- [[entities/people/netta|Netta]]
+- [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
 - [[entities/systems/backups|System: backups]]
 - [[entities/systems/cover-letters|System: cover letters]]
 - [[entities/systems/events-radar|System: events radar]]

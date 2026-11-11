@@ -3,12 +3,12 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 76
+- Total pages: 106
 - Claims: 0
-- Sources: 50
-- Entities: 16
-- Concepts: 0
-- Syntheses: 0
+- Sources: 56
+- Entities: 23
+- Concepts: 8
+- Syntheses: 9
 - Reports: 10
 
 ### Sources
@@ -37,6 +37,9 @@
 - [[sources/bridge-assistant-b3367344-memory-2026-11-08-a55cfffb|Memory Bridge (assistant): 2026-11-08]]
 - [[sources/bridge-assistant-b3367344-memory-2026-11-09-c05c268b|Memory Bridge (assistant): 2026-11-09]]
 - [[sources/bridge-assistant-b3367344-memory-2026-11-10-2316-831f0eba|Memory Bridge (assistant): 2026-11-10-2316]]
+- [[sources/bridge-assistant-b3367344-memory-2026-11-11-0118-47031c69|Memory Bridge (assistant): 2026-11-11-0118]]
+- [[sources/bridge-assistant-b3367344-memory-2026-11-11-1251-61ed0e87|Memory Bridge (assistant): 2026-11-11-1251]]
+- [[sources/bridge-assistant-b3367344-memory-2026-11-11-1546-11204cbb|Memory Bridge (assistant): 2026-11-11-1546]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-03-74eda6bc|Memory Bridge (assistant): dreaming / deep / 2026-11-03]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-04-b87d7b6b|Memory Bridge (assistant): dreaming / deep / 2026-11-04]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-05-f0804e33|Memory Bridge (assistant): dreaming / deep / 2026-11-05]]
@@ -45,6 +48,7 @@
 - [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-08-9a434a68|Memory Bridge (assistant): dreaming / deep / 2026-11-08]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-09-80f04d88|Memory Bridge (assistant): dreaming / deep / 2026-11-09]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-10-24ca9e88|Memory Bridge (assistant): dreaming / deep / 2026-11-10]]
+- [[sources/bridge-assistant-b3367344-memory-dreaming-deep-2026-11-11-b9096057|Memory Bridge (assistant): dreaming / deep / 2026-11-11]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-04-c2af2c73|Memory Bridge (assistant): dreaming / light / 2026-11-04]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-05-5977a12d|Memory Bridge (assistant): dreaming / light / 2026-11-05]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-06-7893846e|Memory Bridge (assistant): dreaming / light / 2026-11-06]]
@@ -52,6 +56,7 @@
 - [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-08-5cd899cd|Memory Bridge (assistant): dreaming / light / 2026-11-08]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-09-47557893|Memory Bridge (assistant): dreaming / light / 2026-11-09]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-10-81036d26|Memory Bridge (assistant): dreaming / light / 2026-11-10]]
+- [[sources/bridge-assistant-b3367344-memory-dreaming-light-2026-11-11-7926f369|Memory Bridge (assistant): dreaming / light / 2026-11-11]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-03-26dc6ae9|Memory Bridge (assistant): dreaming / rem / 2026-11-03]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-04-2a9875d6|Memory Bridge (assistant): dreaming / rem / 2026-11-04]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-05-59333d80|Memory Bridge (assistant): dreaming / rem / 2026-11-05]]
@@ -60,12 +65,20 @@
 - [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-08-c293581b|Memory Bridge (assistant): dreaming / rem / 2026-11-08]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-09-203d9f15|Memory Bridge (assistant): dreaming / rem / 2026-11-09]]
 - [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-10-b1bc2114|Memory Bridge (assistant): dreaming / rem / 2026-11-10]]
+- [[sources/bridge-assistant-b3367344-memory-dreaming-rem-2026-11-11-8d762459|Memory Bridge (assistant): dreaming / rem / 2026-11-11]]
 - [[sources/bridge-assistant-b3367344-memory-events-e6fed978f86e7360cd14feb17fecefbc-memory-host-events-jsonl-42268ca1|Memory Bridge (assistant): event journal]]
 - [[sources/bridge-assistant-b3367344-memory-2d62c497|Memory Bridge (assistant): MEMORY]]
 
 ### Entities
+- [[entities/people/bear|Bear]]
 - [[entities/bear-projects|Bear's projects]]
 - [[entities/systems/systems|Bearnice's systems]]
+- [[entities/places/frankfurt-airport|Frankfurt Airport (FRA)]]
+- [[entities/places/heilbronn|Heilbronn]]
+- [[entities/people/kahlua|Kahlua]]
+- [[entities/people/layla|Layla]]
+- [[entities/people/netta|Netta]]
+- [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
 - [[entities/systems/backups|System: backups]]
 - [[entities/systems/cover-letters|System: cover letters]]
 - [[entities/systems/events-radar|System: events radar]]
@@ -82,10 +95,25 @@
 - [[entities/systems/website|System: website]]
 
 ### Concepts
-- No concepts yet.
+- [[concepts/gig-taste|Gig taste]]
+- [[concepts/airport-hotel-before-early-flight|Preference: airport hotel before an early flight]]
+- [[concepts/body-wash-preferences|Preference: body wash]]
+- [[concepts/communication-style|Preference: how Bear likes Bearnice to communicate]]
+- [[concepts/lube-preferences|Preference: lube]]
+- [[concepts/night-owl-and-tomorrow|Preference: night owl, and what 'tomorrow' means]]
+- [[concepts/ordering-online-over-speaking-german|Preference: order online or point at a shelf]]
+- [[concepts/the-shelf|The shelf (keep.json)]]
 
 ### Syntheses
-- No syntheses yet.
+- [[syntheses/decision-no-phone-calls|Decision: Bearnice never offers a phone call]]
+- [[syntheses/decision-site-and-shelf|Decision: Bearnice's site and the shelf]]
+- [[syntheses/decision-walk-reminders-removed|Decision: Kahlua walk reminders removed]]
+- [[syntheses/decision-gig-taste-sources|Decision: Last.fm is the gig taste source]]
+- [[syntheses/decision-morning-brief-design|Decision: the morning brief]]
+- [[syntheses/decision-place-ladder|Decision: where to relocate (place ladder)]]
+- [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
+- [[syntheses/schengen-stay-oct-2026-jan-2027|Schengen stay, Oct 2026 to Jan 2027]]
+- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: STR airport-hotel plan]]
 
 ### Reports
 - [[reports/claim-health|Claim Health]]
