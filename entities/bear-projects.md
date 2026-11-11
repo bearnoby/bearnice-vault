@@ -18,6 +18,7 @@ Snapshot from /me/, saved 2026-11-10:
 - **Bearnoby-Tools** (FLAGSHIP per Bear, 11 Nov; sabbatical, shipped, maintained). Python desktop toolkit for Twitch streamers driving OBS overlays; in progress: ElevenLabs-voiced talking "pet" tied to TTS redeems.
 
 ## LinkedIn rule (Bear, 11 Nov 2026)
+- **No AI mention in the tagline.** The dev stack goes in his CV and project breakdown. His draft: "Building tools for streamers, creators, and the communities surrounding them" (77 chars, wraps to two lines in the preview). He wants it shorter and catchier, like "Tools for streamers and creators".
 - **CharacterForge goes on the resume but is deliberately left off LinkedIn and BearnobyLabs.** Never mention it in the tagline, About or posts for the company page.
 
 ## Rules from /me/
