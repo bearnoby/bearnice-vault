@@ -11,7 +11,7 @@ sourceIds:
   - repo:tools/runway
   - repo:jobs/bearnice-runway.yaml
   - repo:agents/assistant/skills/runway/SKILL.md
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-11T17:12:48.000Z
 ---
 
 # System: runway
@@ -49,10 +49,11 @@ None of its own. Decisions go to Bear as a DM from Bearnice (draft options, "go 
 - A leg with no `until` is open-ended; after the last leg's end the build assumes he is home.
 - `travel-log.json` is written by the build. Fix a wrong past day there by hand and the clocks follow.
 - Month-end dates (the six-month and one-year marks) used to overflow; `addMonths` clamps to the last day of the month.
-- The `/runway/` page and `runway.json` are never edited by hand. Phase 4 of the tidy plan will move the nav around them; say so here when it does.
+- The `/runway/` page and `runway.json` are never edited by hand. Since Phase 4 the page sits under Trackers in the shared nav (`data/nav.json`) and `runway.json` is git-ignored in the site repo; the home page's "Right now" reads it.
 
 ## Change log
 
+- 2026-11-11 Phase 4 site roll-out (`34c3231`): shared nav and shell; the home page reads `runway.json`; the file is no longer committed.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-10 Month-end overflow fixed in `addMonths` and the stay clocks (`e7756f3`); job moved to a file (`a03bf3c`); ported to `tools/lib` (`5779045`).
 - 2026-11-05 Shows he is going to appear on the runway (`35bc100`).

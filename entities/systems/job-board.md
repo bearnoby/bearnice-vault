@@ -11,7 +11,7 @@ sourceIds:
   - repo:tools/job-board
   - repo:jobs/bearnice-job-board-followups.yaml
   - repo:tools/taps
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-11T17:12:48.000Z
 ---
 
 # System: job board
@@ -23,7 +23,7 @@ Turns Bear's taps on the [[entities/systems/job-feed|job feed]] cards into a rec
 - Repo `tools/job-board/check.mjs` (the check; exports `tick`), `tools/lib/taps.mjs` (reading taps), `tools/lib/site.mjs` (publishing). `migrate-to-board.mjs` was a one-off (old card threads to forum posts); no listing is left for it. Tests in `tools/job-board/test/`.
 - Repo `jobs/bearnice-taps.yaml` (the `job-board` handler) and `jobs/bearnice-job-board-followups.yaml` + `.md` (prompt: "follow the Board follow-ups section of your job-scout skill"). Her skill `job-scout`: "Two layers", "Board follow-ups", "His replies".
 - Her workspace `jobs/`: `seen.json` (every listing, its status and board fields), `board-state.json` (the follow-ups wake-up), `visa/routes.md`, `visa/eligibility.md`, `visa/cases/<company>.md`, `sources/resume-2026-swe.pdf` and `-tpm.pdf`.
-- Site: `site/data/jobs.json` (written by the check from `seen.json`, never by hand), page `/research/job-hunt/` (moves to `/jobs/` in Phase 4).
+- Site: `site/data/jobs.json` (written by the check from `seen.json`, never by hand), page `/jobs/` (the old `/research/job-hunt/` redirects there); `data/jobs.json` is git-ignored in the site repo.
 - Env: `DISCORD_BOT_TOKEN_BEARNICE`, `DISCORD_CHANNEL_JOB_HUNT`, `DISCORD_CHANNEL_JOB_BOARD`; optional `JOB_BOARD_OWNER`, `JOB_BOARD_SEEN`, `JOB_BOARD_SITE`, `JOB_BOARD_GUILD`, `JOB_BOARD_QUIET=1` (no publish, no wake-up; tests).
 
 ## Jobs
@@ -57,6 +57,7 @@ The check wakes the follow-ups (`openclaw cron run`) when the set of pending wor
 
 ## Change log
 
+- 2026-11-11 Phase 4 site roll-out (`34c3231`): the job hunt page moved to `/jobs/`; `jobs.json` is no longer committed.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and read-only server checks.
 - 2026-11-10 The check became the `job-board` handler of `bearnice-taps`, replacing `bearnice-job-board-check` (deployed 11 Nov, `45ce147`); follow-ups pinned to DeepSeek; moved to job files.
 - 2026-11-09 No more To Do tasks; apply-by and follow-up live in the board post (`fd87c4c`).

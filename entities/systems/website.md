@@ -14,7 +14,7 @@ sourceIds:
   - repo:tools/site-api
   - repo:caddy/Caddyfile
   - repo:docker-compose.yml
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-11T17:12:48.000Z
 ---
 
 # System: website
@@ -51,10 +51,11 @@ None. Bear opens the page from links in Discord posts and the brief.
 - Generated data (`data/concerts.json`, `jobs.json`, `runway.json`, `events.json`, `ops.json`) is written by tools; never hand-edit it or the pages that render it.
 - A deploy restarts `site-api` on code changes in `tools/site-api/`, and `bearnice-site` when `caddy/Caddyfile` changes (a single-file mount).
 - Her browser sees screenshots only as text from a vision model (Gemini); her own model is text-only.
-- **Phase 4 will change this note**: four fixed sections and one nav from `data/nav.json`, `pages.json` as the register, `/research/job-hunt/` moving to `/jobs/`, a `check.mjs` inside `publish.sh`, and generated data kept out of git. See `docs/plans/2026-11-tidy-vault-site.md`. Whoever builds it updates this note.
+- **Since Phase 4 (11 Nov):** the "scrapbook desk" design. Four fixed sections and one nav from `data/nav.json`; `data/pages.json` registers every page; one page shell and `assets/base.css` plus a stylesheet per page type; the job board is at `/jobs/` (redirects for moved pages are in the repo's `caddy/Caddyfile`, so a move is a deploy); `tools/site/check.mjs` runs inside `publish.sh` and errors block the commit; tool-written data (`concerts`, `events`, `jobs`, `runway`, `ops`, `keep` `.json`) is git-ignored by name. Her rules are the site's `README.md` and `DESIGN.md`; read those before changing the site.
 
 ## Change log
 
+- 2026-11-11 Phase 4 site roll-out (`34c3231`): new design, shell, nav and page register; `/jobs/`; site check in publish; generated data out of git; images to WebP.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-10 "My notes" page (`/me/`) feeds the letter writer (`3b24276`); one site publisher in `tools/lib` (`42126ab`).
 - 2026-10-27 She can look at her own site: allowlisted browser sidecar and `:8080` (`a9bb107`, `c70b0d8`).
