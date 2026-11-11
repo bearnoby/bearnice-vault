@@ -22,7 +22,7 @@ Bear prefers an airport hotel the night before an early flight over a pre-dawn t
 ### Referenced By
 
 - [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
-- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: STR airport-hotel plan]]
+- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: Liverpool via STR airport hotel]]
 
 ### Related Pages
 

@@ -38,5 +38,5 @@ Airport about 1h15 by train from [[entities/places/heilbronn|Heilbronn]]. Source
 - [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 - [[entities/people/kahlua|Kahlua]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 <!-- openclaw:wiki:related:end -->

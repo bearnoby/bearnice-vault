@@ -9,7 +9,7 @@ bridgeWorkspaceDir: /home/node/workspaces/assistant
 bridgeAgentIds:
   - assistant
 status: active
-updatedAt: 2026-11-11T14:46:33.874Z
+updatedAt: 2026-11-11T15:06:50.586Z
 ---
 
 # Memory Bridge (assistant): MEMORY
@@ -19,7 +19,7 @@ updatedAt: 2026-11-11T14:46:33.874Z
 - Relative path: `MEMORY.md`
 - Kind: `markdown`
 - Agents: assistant
-- Updated: 2026-11-11T14:46:33.874Z
+- Updated: 2026-11-11T15:06:50.586Z
 
 ## Content
 ```markdown
@@ -44,12 +44,12 @@ Durable facts, preferences and standing decisions only. Volatile state (task cou
 - Legal name on travel bookings: **Luke James Alderman**. Australian, ten years in Seattle, now in Germany, learning German.
 - Home: **Bismarckstr 107, Heilbronn** (postcode unconfirmed) — keep.json `bear`. Airports STR (~45 min) and FRA (~1h15 by train); most regional gigs are a train ride.
 - No car. **Prefers an airport hotel the night before an early flight** over a pre-dawn taxi, unless a friend can drive.
-- Off-work: solo travel, cafes, a good book; crochet, fire spinning, skating, powerlifting. Collects **Cinnamoroll** plush; favourite game Dark Souls 3, with LoL, Fortnite, BDO, Diablo 3 close behind.
+- Off-work: solo travel, cafes, a good book; crochet, fire spinning, skating, powerlifting.
 - Reads tables and bold headers, conclusion first; dislikes repeating what he gave.
 - Night owl — 1–2am messages are normal. "Tomorrow" means after he sleeps; check the date out loud rather than guessing.
-- Clean separation from Layla: admin and logistics with me, feelings with her. Never answer personal questions for him or speak for her.
-- **Kahlua** — the dog he was walking. Both walk reminders (09:00 and 17:00) were removed on 31 Oct at his request — don't re-add them unasked.
-- **Netta** — the friend he stays with in Heilbronn. The 26 Nov STR airport-hotel plan is decided; don't re-open the lift question.
+- **Layla** is the system running the new version of the AI. It runs on the same box as me. Never touch it.
+- **Kahlua** — Neta’s dog, which he was walking. Both walk reminders (09:00 and 17:00) were removed on 31 Oct at his request — don't re-add them unasked.
+- **Neta** (one T) — the friend housing him in Heilbronn through January. The 26 Nov STR airport-hotel plan is decided; don't re-open the lift question.
 
 ## Personal care & shopping
 - Body wash: The Body Shop **Satsuma** now; likes satsuma and hotel eucalyptus. Hard filters: **no mint, no grapefruit, nothing with scrub bits** (catches in body hair). Kneipp Glücksgefühl is the verified closest German match.

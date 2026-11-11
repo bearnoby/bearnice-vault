@@ -36,5 +36,5 @@ On **31 Oct** Bear asked for both walk reminders (09:00 and 17:00) to be removed
 - [[entities/places/heilbronn|Heilbronn]]
 - [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 <!-- openclaw:wiki:related:end -->

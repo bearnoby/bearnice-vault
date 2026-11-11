@@ -9,7 +9,7 @@
 - [[entities/places/heilbronn|Heilbronn]]
 - [[entities/people/kahlua|Kahlua]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 - [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
 - [[entities/systems/backups|System: backups]]
 - [[entities/systems/cover-letters|System: cover letters]]

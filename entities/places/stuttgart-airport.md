@@ -25,7 +25,7 @@ Airport about 45 minutes from [[entities/places/heilbronn|Heilbronn]]. Source: M
 
 - [[entities/places/frankfurt-airport|Frankfurt Airport (FRA)]]
 - [[entities/places/heilbronn|Heilbronn]]
-- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: STR airport-hotel plan]]
+- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: Liverpool via STR airport hotel]]
 
 ### Related Pages
 
@@ -40,5 +40,5 @@ Airport about 45 minutes from [[entities/places/heilbronn|Heilbronn]]. Source: M
 - [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 - [[entities/people/kahlua|Kahlua]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 <!-- openclaw:wiki:related:end -->

@@ -40,5 +40,5 @@ Source: MEMORY.md, Job hunt & relocation.
 - [[entities/places/heilbronn|Heilbronn]]
 - [[entities/people/kahlua|Kahlua]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 <!-- openclaw:wiki:related:end -->

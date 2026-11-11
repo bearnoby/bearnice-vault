@@ -15,10 +15,10 @@ updatedAt: 2026-11-11T15:00:00.000Z
 - `source` is the point: `bear` = he asked; `auto` = Bearnice added it. "Remember this" means `bear`.
 - `private: true` keeps the value in keep.json and publishes only host plus "ask me".
 - Asked for a link: paste the URL flat, no preamble.
-- Bear's own entries: current address ([[entities/places/heilbronn]]) and Layla's monitoring dashboard (private; see [[entities/people/layla]]).
 - Career and visa links Bearnice saved: LinkedIn profile https://www.linkedin.com/in/lukealderman/, portfolio https://lualderm.com/#portfolio, NL IND recognised sponsors https://ind.nl/en/public-register-recognised-sponsors, NL highly skilled migrant salary https://ind.nl/en/required-amounts-income-requirement, Make it in Germany https://www.make-it-in-germany.com/en/, Schengen calculator https://ec.europa.eu/assets/home/visa-calculator/calculator.htm.
 - Work reading: Google SRE books https://sre.google/books/, OpenTelemetry docs https://opentelemetry.io/docs/, plus Bearnice's site pages for the telemetry reading list, job hunt and relocation routes.
 - Tools: AgentMail docs https://docs.agentmail.to/llms.txt; Last.fm https://www.last.fm/user/bearnoby ([[concepts/gig-taste]]).
+- Bear's own entry: current address ([[entities/places/heilbronn]]).
 - Decision: [[syntheses/decision-site-and-shelf]].
 
 ## Notes

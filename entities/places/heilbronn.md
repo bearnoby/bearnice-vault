@@ -13,8 +13,8 @@ updatedAt: 2026-11-11T15:00:00.000Z
 
 [[entities/people/bear|Bear]]'s home base in Germany. Source: MEMORY.md, About Bear.
 
-- Address: Bismarckstr 107, Heilbronn (postcode unconfirmed). It is saved in keep.json as "Current address" ("where you live now, for when you get lost"), added by Bear.
-- Lives with [[entities/people/netta]].
+- Address: Bismarckstr 107, 74074 Heilbronn (postcode confirmed by Bear, 11 Nov 2026). It is saved in keep.json as "Current address" ("where you live now, for when you get lost"), added by Bear.
+- Bear is housed by [[entities/people/neta]] through January 2027.
 - Nearest airports: [[entities/places/stuttgart-airport]] (about 45 min) and [[entities/places/frankfurt-airport]] (about 1h15 by train). Most regional gigs are a train ride.
 - No car.
 - The Germany cheat sheet has a `heilbronn/` subpage on the site.
@@ -29,10 +29,11 @@ updatedAt: 2026-11-11T15:00:00.000Z
 
 - [[entities/people/bear|Bear]]
 - [[entities/places/frankfurt-airport|Frankfurt Airport (FRA)]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 - [[concepts/airport-hotel-before-early-flight|Preference: airport hotel before an early flight]]
 - [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
 - [[concepts/the-shelf|The shelf (keep.json)]]
+- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: Liverpool via STR airport hotel]]
 
 ### Related Pages
 

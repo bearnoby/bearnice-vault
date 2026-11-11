@@ -2,19 +2,15 @@
 pageType: entity
 id: entity.layla
 title: "Layla"
-entityType: person
+entityType: system
 sourceIds:
   - memory:MEMORY.md
-  - file:keep.json
-updatedAt: 2026-11-11T15:00:00.000Z
+updatedAt: 2026-11-11T15:15:00.000Z
 ---
 
 # Layla
 
-Layla appears in MEMORY.md only as a boundary: **clean separation**. Admin and logistics go through Bearnice; feelings go to Layla. Never answer personal questions for Bear or speak for her. Source: MEMORY.md, About Bear.
-
-- keep.json has a private link to a "Layla's monitoring dashboard", reachable on home wifi only. The link is deliberately not copied here.
-- See [[entities/people/bear]].
+Layla is the system running the new version of the AI. It runs on the same box as Bearnice. **Never touch it.** (Told by Bear, 11 Nov 2026.)
 
 ## Notes
 <!-- openclaw:human:start -->
@@ -22,10 +18,6 @@ Layla appears in MEMORY.md only as a boundary: **clean separation**. Admin and l
 
 ## Related
 <!-- openclaw:wiki:related:start -->
-### Referenced By
-
-- [[concepts/the-shelf|The shelf (keep.json)]]
-
 ### Related Pages
 
 - [[entities/people/bear|Bear]]

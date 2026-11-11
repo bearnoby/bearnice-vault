@@ -12,7 +12,7 @@ updatedAt: 2026-11-11T15:00:00.000Z
 
 # Kahlua
 
-Kahlua is a dog Bear was walking. Source: MEMORY.md, About Bear.
+Kahlua is [[entities/people/neta|Neta]]'s dog, and Bear was walking her (told by Bear, 11 Nov 2026). Source: MEMORY.md, About Bear.
 
 - Both walk reminders (09:00 and 17:00) were removed on 31 Oct at Bear's request. See [[syntheses/decision-walk-reminders-removed]].
 
@@ -25,6 +25,7 @@ Kahlua is a dog Bear was walking. Source: MEMORY.md, About Bear.
 ### Referenced By
 
 - [[syntheses/decision-walk-reminders-removed|Decision: Kahlua walk reminders removed]]
+- [[entities/people/neta|Neta]]
 
 ### Related Pages
 
@@ -39,5 +40,5 @@ Kahlua is a dog Bear was walking. Source: MEMORY.md, About Bear.
 - [[entities/places/heilbronn|Heilbronn]]
 - [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[concepts/airport-hotel-before-early-flight|Preference: airport hotel before an early flight]]
 <!-- openclaw:wiki:related:end -->

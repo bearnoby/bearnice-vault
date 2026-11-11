@@ -10,5 +10,5 @@
 - [[syntheses/decision-place-ladder|Decision: where to relocate (place ladder)]]
 - [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 - [[syntheses/schengen-stay-oct-2026-jan-2027|Schengen stay, Oct 2026 to Jan 2027]]
-- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: STR airport-hotel plan]]
+- [[syntheses/trip-26-nov-str-airport-hotel|Trip, 26 Nov: Liverpool via STR airport hotel]]
 <!-- openclaw:wiki:syntheses:index:end -->

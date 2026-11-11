@@ -45,7 +45,6 @@ updatedAt: 2026-11-04T02:00:20.517Z
   - evidence: memory/2026-10-28.md:3-3
   - recalls: 0
   - status: staged
-- Candidate: 2026-10-28 (Europe/Berlin): Layla's monitoring dashboard link added to `keep.json`: LAN only (home wifi), token kept private, site shows host + "ask me". Added a `private: true` convention to `keep.py sync` — no credentials in the site repo, ever.
   - confidence: 0.62
   - evidence: memory/2026-10-28.md:4-4
   - recalls: 0

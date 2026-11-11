@@ -43,6 +43,6 @@ Source: MEMORY.md, Job hunt & relocation.
 - [[entities/places/heilbronn|Heilbronn]]
 - [[entities/people/kahlua|Kahlua]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 - [[concepts/airport-hotel-before-early-flight|Preference: airport hotel before an early flight]]
 <!-- openclaw:wiki:related:end -->

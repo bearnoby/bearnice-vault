@@ -40,5 +40,5 @@ Source: MEMORY.md, Music & Gigs.
 - [[syntheses/job-hunt-fixed-facts|Job hunt: fixed facts and tracks]]
 - [[entities/people/kahlua|Kahlua]]
 - [[entities/people/layla|Layla]]
-- [[entities/people/netta|Netta]]
+- [[entities/people/neta|Neta]]
 <!-- openclaw:wiki:related:end -->

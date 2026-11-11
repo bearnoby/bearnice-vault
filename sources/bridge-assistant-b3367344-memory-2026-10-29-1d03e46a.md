@@ -58,7 +58,6 @@ updatedAt: 2026-10-29T12:45:52.879Z
 
 ## Misc
 - His current address (Bismarckstr 107, Heilbronn) is in keep.json as an address entry, source "bear"; the /links/ shelf shows it under the "you asked" filter.
-- keep.json holds Layla's dashboard entry with `private: true`; the shelf deliberately shows it redacted. Tool output masks the token — read it by length/hash, not by echoing.
 
 ```
 
