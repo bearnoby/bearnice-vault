@@ -2,5 +2,20 @@
 
 ## Generated
 <!-- openclaw:wiki:entities:index:start -->
-- No entities yet.
+- [[entities/bear-projects|Bear's projects]]
+- [[entities/systems/systems|Bearnice's systems]]
+- [[entities/systems/backups|System: backups]]
+- [[entities/systems/cover-letters|System: cover letters]]
+- [[entities/systems/events-radar|System: events radar]]
+- [[entities/systems/gig-radar|System: gig radar]]
+- [[entities/systems/heartbeat|System: heartbeat]]
+- [[entities/systems/job-board|System: job board]]
+- [[entities/systems/job-feed|System: job feed]]
+- [[entities/systems/memory-and-vault|System: memory and vault]]
+- [[entities/systems/morning-brief|System: morning brief]]
+- [[entities/systems/ops-report|System: ops report]]
+- [[entities/systems/runway|System: runway]]
+- [[entities/systems/taps|System: taps dispatcher]]
+- [[entities/systems/upgrades-and-builds|System: upgrades and builds]]
+- [[entities/systems/website|System: website]]
 <!-- openclaw:wiki:entities:index:end -->

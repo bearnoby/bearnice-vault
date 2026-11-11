@@ -3,13 +3,13 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 59
+- Total pages: 76
 - Claims: 0
 - Sources: 50
-- Entities: 0
+- Entities: 16
 - Concepts: 0
 - Syntheses: 0
-- Reports: 9
+- Reports: 10
 
 ### Sources
 - [[sources/bridge-assistant-b3367344-memory-2026-10-24-4de49222|Memory Bridge (assistant): 2026-10-24]]
@@ -64,7 +64,22 @@
 - [[sources/bridge-assistant-b3367344-memory-2d62c497|Memory Bridge (assistant): MEMORY]]
 
 ### Entities
-- No entities yet.
+- [[entities/bear-projects|Bear's projects]]
+- [[entities/systems/systems|Bearnice's systems]]
+- [[entities/systems/backups|System: backups]]
+- [[entities/systems/cover-letters|System: cover letters]]
+- [[entities/systems/events-radar|System: events radar]]
+- [[entities/systems/gig-radar|System: gig radar]]
+- [[entities/systems/heartbeat|System: heartbeat]]
+- [[entities/systems/job-board|System: job board]]
+- [[entities/systems/job-feed|System: job feed]]
+- [[entities/systems/memory-and-vault|System: memory and vault]]
+- [[entities/systems/morning-brief|System: morning brief]]
+- [[entities/systems/ops-report|System: ops report]]
+- [[entities/systems/runway|System: runway]]
+- [[entities/systems/taps|System: taps dispatcher]]
+- [[entities/systems/upgrades-and-builds|System: upgrades and builds]]
+- [[entities/systems/website|System: website]]
 
 ### Concepts
 - No concepts yet.
@@ -75,6 +90,7 @@
 ### Reports
 - [[reports/claim-health|Claim Health]]
 - [[reports/contradictions|Contradictions]]
+- [[reports/lint|Lint Report]]
 - [[reports/low-confidence|Low Confidence]]
 - [[reports/open-questions|Open Questions]]
 - [[reports/person-agent-directory|Person Agent Directory]]
