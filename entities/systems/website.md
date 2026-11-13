@@ -14,7 +14,7 @@ sourceIds:
   - repo:tools/site-api
   - repo:caddy/Caddyfile
   - repo:docker-compose.yml
-updatedAt: 2026-11-11T17:12:48.000Z
+updatedAt: 2026-11-13T00:00:00.000Z
 ---
 
 # System: website
@@ -48,13 +48,14 @@ None. Bear opens the page from links in Discord posts and the brief.
 
 - Never publish ports 8080 (the site without a login, Compose network only) or 3000 (browser CDP, no auth).
 - Let's Encrypt needs the record unproxied and port 80 open (HTTP-01).
-- Generated data (`data/concerts.json`, `jobs.json`, `runway.json`, `events.json`, `ops.json`) is written by tools; never hand-edit it or the pages that render it.
+- Generated data (`data/concerts.json`, `jobs.json`, `runway.json`, `events.json`, `ops.json`, `keep.json`, `vault.json`) is written by tools; never hand-edit it or the pages that render it.
 - A deploy restarts `site-api` on code changes in `tools/site-api/`, and `bearnice-site` when `caddy/Caddyfile` changes (a single-file mount).
 - Her browser sees screenshots only as text from a vision model (Gemini); her own model is text-only.
 - **Since Phase 4 (11 Nov):** the "scrapbook desk" design. Four fixed sections and one nav from `data/nav.json`; `data/pages.json` registers every page; one page shell and `assets/base.css` plus a stylesheet per page type; the job board is at `/jobs/` (redirects for moved pages are in the repo's `caddy/Caddyfile`, so a move is a deploy); `tools/site/check.mjs` runs inside `publish.sh` and errors block the commit; tool-written data (`concerts`, `events`, `jobs`, `runway`, `ops`, `keep` `.json`) is git-ignored by name. Her rules are the site's `README.md` and `DESIGN.md`; read those before changing the site.
 
 ## Change log
 
+- 2026-11-11 "What I know" (`/vault/`, Bearnice section): a read-only view of this vault's people, places, systems, concepts and syntheses (not `sources/` or `reports/`). It renders `data/vault.json`, which `tools/vault-page/build.mjs` writes at the end of every vault sync (`dce6bde`; site `86a43ae`). To change what it shows, edit the note; never the JSON or the page.
 - 2026-11-11 Phase 4 site roll-out (`34c3231`): new design, shell, nav and page register; `/jobs/`; site check in publish; generated data out of git; images to WebP.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-10 "My notes" page (`/me/`) feeds the letter writer (`3b24276`); one site publisher in `tools/lib` (`42126ab`).
@@ -71,4 +72,5 @@ None. Bear opens the page from links in Discord posts and the brief.
 
 - [[entities/systems/systems|Bearnice's systems]]
 - [[syntheses/decision-site-and-shelf|Decision: Bearnice's site and the shelf]]
+- [[entities/systems/memory-and-vault|System: memory and vault]]
 <!-- openclaw:wiki:related:end -->

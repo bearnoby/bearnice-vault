@@ -14,7 +14,7 @@ sourceIds:
   - repo:scripts/vault-sync.sh
   - repo:config/openclaw.json
   - repo:agents/assistant/skills/vault/SKILL.md
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-13T00:00:00.000Z
 ---
 
 # System: memory and vault
@@ -57,6 +57,7 @@ None. Bear reads and edits the vault in Obsidian after a `git pull`; the ops ale
 
 ## Change log
 
+- 2026-11-11 Each vault sync now ends by rebuilding `site/data/vault.json` for the `/vault/` page (`tools/vault-page/build.mjs`, run in the gateway container; best effort, never changes the sync result) (`dce6bde`). See [[entities/systems/website|System: website]].
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-11 `wiki_*` tools added to `tools.alsoAllow` (`85dcb60`); build sessions keep these notes (`ae97ee5`).
 - 2026-11-10 `memory-wiki` enabled in bridge mode (`0520b8f`); sync script and 15-minute timer (`9c1b014`); vault page count and sync alert in the ops report (`80a8c5b`).
