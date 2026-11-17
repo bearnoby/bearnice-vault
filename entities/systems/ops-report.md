@@ -12,7 +12,7 @@ sourceIds:
   - repo:scripts/ops-report.sh
   - repo:tools/ops
   - repo:tools/ops/README.md
-updatedAt: 2026-11-11T17:12:48.000Z
+updatedAt: 2026-11-17T23:00:00.000Z
 ---
 
 # System: ops report
@@ -53,6 +53,7 @@ One file that says how the whole system is doing, and an alert when something ch
 
 ## Change log
 
+- 2026-11-13 build/10-cover-letter-writer-overhaul: Spend rows renamed "Cover letters (Anthropic API)" (old Opus rows only) and "Cover letters (OpenRouter)" (Carbon and the reword); Fable letters through Claude Code cost nothing here.
 - 2026-11-11 Phase 4 site roll-out (`34c3231`): the `/ops/` page uses the site's shared shell and is linked from the footer.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-10 Vault page count, last sync and a vault-sync alert (`80a8c5b`); budget alerts and `set-budget.sh` (`ff5a480`); channels come from the job files (`ce3bf08`); JOBS.md and CHANNELS.md regenerated (`bc0435c`).

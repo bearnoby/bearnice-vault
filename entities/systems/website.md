@@ -14,7 +14,7 @@ sourceIds:
   - repo:tools/site-api
   - repo:caddy/Caddyfile
   - repo:docker-compose.yml
-updatedAt: 2026-11-13T00:00:00.000Z
+updatedAt: 2026-11-17T23:00:00.000Z
 ---
 
 # System: website
@@ -26,7 +26,7 @@ Bearnice's private site at https://bearnice.lualderm.com: trackers that render f
 - `site/` is gitignored in the repo; on the server it is a clone of the private repo `bearnice-site`, and its own `README.md` is her guide to the layout, template and rules. Her skill `website`; repo `docs/SITE.md`.
 - Repo `tools/site/publish.sh` (commit, rebase, push; run as `sh /home/node/tools/site/publish.sh "<message>"`) and `tools/lib/site.mjs` (`publishSite`: the one way tools publish; a failed push never throws, the page data is already live).
 - Repo `caddy/Caddyfile`, `docker-compose.yml`: containers `bearnice-site` (Caddy 2, ports 80 and 443; login `SITE_USER` with a bcrypt hash `SITE_PASSWORD_HASH`; `SITE_DOMAIN`), `bearnice-site-api` (`tools/site-api/server.mjs`, no dependencies, no published port) and `bearnice-browser` (browserless Chromium, CDP on port 3000 inside the Compose network).
-- `/me/` writes only `agents/assistant/jobs/sources/me/about-me.json` (the last 200 versions kept in `history/`). The boxes are `SECTIONS` in `server.mjs` and `ABOUT_TITLES` in `tools/letters/opus.mjs`; add a box in both.
+- `/me/` writes only `agents/assistant/jobs/sources/me/about-me.json` (the last 200 versions kept in `history/`). The boxes are `SECTIONS` in `server.mjs`. Since 13 Nov the cover-letter writer no longer reads these notes; the page and its data are kept.
 - Secrets (names only): deploy key in `secrets/site-deploy/` (mounted read-only at `/home/node/.site-deploy`), `.env` values above. DNS: Cloudflare A record `bearnice`, DNS only.
 
 ## Jobs
@@ -55,6 +55,7 @@ None. Bear opens the page from links in Discord posts and the brief.
 
 ## Change log
 
+- 2026-11-13 build/10-cover-letter-writer-overhaul: the letter writer stopped reading `/me/`; `tools/letters/opus.mjs` is gone.
 - 2026-11-11 "What I know" (`/vault/`, Bearnice section): a read-only view of this vault's people, places, systems, concepts and syntheses (not `sources/` or `reports/`). It renders `data/vault.json`, which `tools/vault-page/build.mjs` writes at the end of every vault sync (`dce6bde`; site `86a43ae`). To change what it shows, edit the note; never the JSON or the page.
 - 2026-11-11 Phase 4 site roll-out (`34c3231`): new design, shell, nav and page register; `/jobs/`; site check in publish; generated data out of git; images to WebP.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.

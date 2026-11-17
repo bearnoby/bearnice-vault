@@ -27,7 +27,7 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 
 - [[entities/systems/job-feed|Job feed]]: jobs found, graded and carded in #job-hunt. Job `bearnice-job-sources`.
 - [[entities/systems/job-board|Job board]]: taps to statuses, the #job-board forum, follow-ups, the job hunt page. Jobs `bearnice-taps`, `bearnice-job-board-followups`.
-- [[entities/systems/cover-letters|Cover letters]]: letters on request in board posts, PDFs on his letterhead. Job `bearnice-taps`.
+- [[entities/systems/cover-letters|Cover letters]]: letters on request in board posts, written by Fable (Claude Code) or Gemini Carbon from his resume, Connects and the ad; PDFs on his letterhead. Job `bearnice-taps`, host unit `bearnoby-letters-writer`.
 - [[entities/systems/gig-radar|Gig radar]]: one living card per band in #gig-radar, on-sale reminders. Jobs `bearnice-gig-radar-scan`, `bearnice-taps`.
 - [[entities/systems/events-radar|Events radar]]: what's on in the next 7 days, cards in #events-radar. Jobs `bearnice-events-radar`, `bearnice-events-weekend`, `bearnice-taps`.
 - [[entities/systems/runway|Runway]]: where Bear will be, his stay clocks, travel decisions. Job `bearnice-runway`.

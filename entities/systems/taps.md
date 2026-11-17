@@ -11,7 +11,7 @@ sourceIds:
   - repo:tools/taps
   - repo:tools/lib/taps.mjs
   - repo:jobs/bearnice-taps.yaml
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-17T23:00:00.000Z
 ---
 
 # System: taps dispatcher
@@ -59,6 +59,7 @@ The systems behind them: [[entities/systems/gig-radar|Gig radar]], [[entities/sy
 
 ## Change log
 
+- 2026-11-13 build/10-cover-letter-writer-overhaul: the `letters` handler now writes through Fable (Claude Code on the host, via `jobs/letters/queue/`) or Gemini Carbon; see [[entities/systems/cover-letters|Cover letters]].
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-10 Dispatcher built: one pass over the four tap handlers (`4fb6d46`); shared tap reading in `tools/lib/taps.mjs` (`c2189f6`).
 

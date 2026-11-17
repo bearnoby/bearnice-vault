@@ -11,7 +11,7 @@ sourceIds:
   - repo:tools/job-board
   - repo:jobs/bearnice-job-board-followups.yaml
   - repo:tools/taps
-updatedAt: 2026-11-11T17:12:48.000Z
+updatedAt: 2026-11-17T23:00:00.000Z
 ---
 
 # System: job board
@@ -53,10 +53,12 @@ The check wakes the follow-ups (`openclaw cron run`) when the set of pending wor
 - Four writers share `seen.json`: the feed, the check, the letters and the follow-ups agent. Each re-reads and merges only its own fields before writing; keep it that way. The feed runs the check as its own process, outside the taps lock.
 - Job tracking never goes to Microsoft To Do; old `apply_task_id` / `followup_task_id` fields are ignored.
 - The 09:30 run on 11 Nov ended with status `error` ("Exec failed", `consecutiveErrors` 0). Cause not looked into yet.
+- Duplicate posts: the 10 Nov batch made two #job-board posts for some roles seconds apart, and only one is linked (`board_post_id`). If the linked one is deleted the role is marked passed, and taps on the unlinked twin are never read. Catawiki was re-linked to its surviving post on 13 Nov (backup `seen.json.bak-20261113-catawiki-relink`); Lovable · Product Manager (Build Experience) still had an unlinked twin. The cause in the check was not fixed.
 - `stayClocks` overflowed at month ends until R3 (`e7756f3`); the board prefers the runway's clocks from `site/data/runway.json` when they are from today.
 
 ## Change log
 
+- 2026-11-13 build/10-cover-letter-writer-overhaul: Catawiki re-linked to its surviving board post (it was stuck as passed); duplicate-post gotcha recorded. No code change.
 - 2026-11-11 Phase 4 site roll-out (`34c3231`): the job hunt page moved to `/jobs/`; `jobs.json` is no longer committed.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and read-only server checks.
 - 2026-11-10 The check became the `job-board` handler of `bearnice-taps`, replacing `bearnice-job-board-check` (deployed 11 Nov, `45ce147`); follow-ups pinned to DeepSeek; moved to job files.
