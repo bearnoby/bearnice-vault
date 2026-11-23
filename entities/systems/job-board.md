@@ -11,7 +11,7 @@ sourceIds:
   - repo:tools/job-board
   - repo:jobs/bearnice-job-board-followups.yaml
   - repo:tools/taps
-updatedAt: 2026-11-17T23:00:00.000Z
+updatedAt: 2026-11-23T21:55:00.000Z
 ---
 
 # System: job board
@@ -20,7 +20,8 @@ Turns Bear's taps on the [[entities/systems/job-feed|job feed]] cards into a rec
 
 ## Files
 
-- Repo `tools/job-board/check.mjs` (the check; exports `tick`), `tools/lib/taps.mjs` (reading taps), `tools/lib/site.mjs` (publishing). `migrate-to-board.mjs` was a one-off (old card threads to forum posts); no listing is left for it. Tests in `tools/job-board/test/`.
+- Repo `tools/job-board/check.mjs` (the check; exports `tick`, which takes `{ cache, discord }`), `tools/lib/taps.mjs` (reading taps), `tools/lib/site.mjs` (publishing). `migrate-to-board.mjs` was a one-off (old card threads to forum posts); no listing is left for it. Tests in `tools/job-board/test/`: `check.test.mjs` (pure parts) and `board.test.mjs` (a whole pass against a fake Discord).
+- Her workspace `scripts/archive-rejection.mjs` (live data, not in the repo): makes the archived 🚫 record post for a forwarded rejection (`archive_post_id`), sets `passed` if it isn't yet, `--dry-run` to preview. It never deletes a post or writes `board_removed`.
 - Repo `jobs/bearnice-taps.yaml` (the `job-board` handler) and `jobs/bearnice-job-board-followups.yaml` + `.md` (prompt: "follow the Board follow-ups section of your job-scout skill"). Her skill `job-scout`: "Two layers", "Board follow-ups", "His replies".
 - Her workspace `jobs/`: `seen.json` (every listing, its status and board fields), `board-state.json` (the follow-ups wake-up), `visa/routes.md`, `visa/eligibility.md`, `visa/cases/<company>.md`, `sources/resume-2026-swe.pdf` and `-tpm.pdf`.
 - Site: `site/data/jobs.json` (written by the check from `seen.json`, never by hand), page `/jobs/` (the old `/research/job-hunt/` redirects there); `data/jobs.json` is git-ignored in the site repo.
@@ -38,12 +39,16 @@ The check wakes the follow-ups (`openclaw cron run`) when the set of pending wor
 ## Discord
 
 - #job-hunt (text): the feed cards. The check seeds ⭐ 📨 ❌; ❌ beats 📨 beats ⭐; ❌ deletes the card.
-- #job-board (forum): one post per role that is interested, applied, interviewing or offer, with 📨 ❌ (📨 = applied; ❌ or deleting the post = passed). Tags: one status (⭐ 📨 🎤 🎉) plus one track (A sponsored, B remote, C contract, D US), resolved by name each run. Bear retagging 🎤 or 🎉 sets that status (`status_source: tag`). Bearnice answers there only when @mentioned (`requireMention` on the forum).
+- #job-board (forum): one post per role that is interested, applied, interviewing or offer, with 📨 ❌ (📨 = applied; ❌ or deleting the post = passed).
+- **Passed means gone, however it's set** (❌ on card, post or a duplicate post, a reply, a rejection): every pass deletes the post of a passed role. `board_removed` is written only after the delete worked and means "should be gone": each pass lists the forum's open and archived posts and deletes any still standing for such a role. A refused delete fails the handler (shows on /ops/) and is retried next pass.
+- Rejections also get an archived 🚫 record post (tag `rejected`, `archive_post_id`), made by her `archive-rejection.mjs`. The check never touches those. Closed roles (ad down) stay up until he taps ❌; Bear decided 23 Nov not to auto-clear them, as the "ad is down" reading isn't reliable. Tags: one status (⭐ 📨 🎤 🎉) plus one track (A sponsored, B remote, C contract, D US), resolved by name each run. Bear retagging 🎤 or 🎉 sets that status (`status_source: tag`). Bearnice answers there only when @mentioned (`requireMention` on the forum).
 
 ## How to check it
 
 - `agents/assistant/taps/state.json`: `handlers.job-board.failures` 0 and `last_ok` within 10 minutes.
-- `docker exec openclaw-gateway node /home/node/tools/job-board/check.mjs --dry-run`: reads Discord, writes nothing; `pending` lists follow-up work still owed (`<id>:star`, `:applied`, `:case`).
+- `docker exec openclaw-gateway node /home/node/tools/job-board/check.mjs --dry-run`: reads Discord, writes nothing; `pending` lists follow-up work still owed (`<id>:star`, `:applied`, `:case`); `removed` lists roles whose posts a live pass would delete (should be empty between passes, apart from fresh taps).
+- Tests: `node --test tools/job-board/test/*.test.mjs` (host Node 22 needs the glob).
+- On 23 Nov after the build: 106 open posts, 10 archived 🚫 records, no post left for a passed role, no duplicates.
 - `openclaw cron list --all --json`: `bearnice-job-board-followups` `state.lastStatus`.
 - On 11 Nov: 87 listings (36 interested, 24 new, 19 passed, 7 applied, 1 closed), 44 posts on the board.
 
@@ -53,11 +58,13 @@ The check wakes the follow-ups (`openclaw cron run`) when the set of pending wor
 - Four writers share `seen.json`: the feed, the check, the letters and the follow-ups agent. Each re-reads and merges only its own fields before writing; keep it that way. The feed runs the check as its own process, outside the taps lock.
 - Job tracking never goes to Microsoft To Do; old `apply_task_id` / `followup_task_id` fields are ignored.
 - The 09:30 run on 11 Nov ended with status `error` ("Exec failed", `consecutiveErrors` 0). Cause not looked into yet.
-- Duplicate posts: the 10 Nov batch made two #job-board posts for some roles seconds apart, and only one is linked (`board_post_id`). If the linked one is deleted the role is marked passed, and taps on the unlinked twin are never read. Catawiki was re-linked to its surviving post on 13 Nov (backup `seen.json.bak-20261113-catawiki-relink`); Lovable · Product Manager (Build Experience) still had an unlinked twin. The cause in the check was not fixed.
+- Duplicate posts: two promotions racing (the feed runs the check outside the taps lock) can make two posts for one role, and only one is linked (`board_post_id`). Since 23 Nov an unlinked post with the same name made within 10 minutes of the linked one is its twin: ❌ on a twin counts, and twins are deleted with the role. The race itself is not fixed. An unlinked post with no matching role is left alone.
+- `board_removed` used to be trusted as "is gone": on 17 Nov three rejections had it written by hand with the posts still up, and they stayed for a week. The check now verifies against the forum; Bearnice's skill says she never writes `board_removed` or deletes posts.
 - `stayClocks` overflowed at month ends until R3 (`e7756f3`); the board prefers the runway's clocks from `site/data/runway.json` when they are from today.
 
 ## Change log
 
+- 2026-11-23 build/16-board-passed-removal: passed means gone however it's set; `board_removed` only after a real delete and re-verified each pass against open and archived posts; ❌ on duplicate posts counts; `archive-rejection.mjs` sets passed and leaves deleting to the check; 14 stuck or tapped posts cleared on the first pass.
 - 2026-11-13 build/10-cover-letter-writer-overhaul: Catawiki re-linked to its surviving board post (it was stuck as passed); duplicate-post gotcha recorded. No code change.
 - 2026-11-11 Phase 4 site roll-out (`34c3231`): the job hunt page moved to `/jobs/`; `jobs.json` is no longer committed.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and read-only server checks.
