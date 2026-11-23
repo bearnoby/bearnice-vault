@@ -3,11 +3,11 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 107
+- Total pages: 108
 - Claims: 0
 - Sources: 56
 - Entities: 24
-- Concepts: 8
+- Concepts: 9
 - Syntheses: 9
 - Reports: 10
 
@@ -97,6 +97,7 @@
 
 ### Concepts
 - [[concepts/gig-taste|Gig taste]]
+- [[concepts/letter-taste|Letter taste]]
 - [[concepts/airport-hotel-before-early-flight|Preference: airport hotel before an early flight]]
 - [[concepts/body-wash-preferences|Preference: body wash]]
 - [[concepts/communication-style|Preference: how Bear likes Bearnice to communicate]]

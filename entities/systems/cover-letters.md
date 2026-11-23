@@ -83,6 +83,7 @@ Writes a cover letter for a role on the [[entities/systems/job-board|job board]]
 ### Referenced By
 
 - [[entities/systems/systems|Bearnice's systems]]
+- [[concepts/letter-taste|Letter taste]]
 - [[entities/systems/job-board|System: job board]]
 - [[entities/systems/taps|System: taps dispatcher]]
 - [[entities/systems/website|System: website]]

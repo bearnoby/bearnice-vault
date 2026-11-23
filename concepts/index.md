@@ -3,6 +3,7 @@
 ## Generated
 <!-- openclaw:wiki:concepts:index:start -->
 - [[concepts/gig-taste|Gig taste]]
+- [[concepts/letter-taste|Letter taste]]
 - [[concepts/airport-hotel-before-early-flight|Preference: airport hotel before an early flight]]
 - [[concepts/body-wash-preferences|Preference: body wash]]
 - [[concepts/communication-style|Preference: how Bear likes Bearnice to communicate]]
