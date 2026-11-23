@@ -13,6 +13,7 @@
 - [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
 - [[entities/systems/backups|System: backups]]
 - [[entities/systems/cover-letters|System: cover letters]]
+- [[entities/systems/discord-access|System: Discord access]]
 - [[entities/systems/events-radar|System: events radar]]
 - [[entities/systems/gig-radar|System: gig radar]]
 - [[entities/systems/heartbeat|System: heartbeat]]

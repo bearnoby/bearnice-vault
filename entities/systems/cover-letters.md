@@ -12,7 +12,7 @@ sourceIds:
   - repo:tools/letters
   - repo:tools/taps
   - repo:scripts/letters-writer.py
-updatedAt: 2026-11-17T23:00:00.000Z
+updatedAt: 2026-11-23T21:00:00.000Z
 ---
 
 # System: cover letters
@@ -22,12 +22,12 @@ Writes a cover letter for a role on the [[entities/systems/job-board|job board]]
 ## How it runs
 
 1. Each board post without a letter gets a ✍️. Bear tapping it asks for a letter (untapped posts cost nothing).
-2. The ad (`ad.mjs`): text he pasted for the role wins, else the board's public API (Greenhouse, Ashby, Lever, SmartRecruiters), a company careers page showing a Greenhouse job (`?gh_jid=`), or a page's JSON-LD job posting. No model reads a web page. **No ad, no letter**: the post asks him to paste the ad (a message or a text file), the listing gets `letter_needs_ad`, and his next long message there is saved as `jobs/letters/<id>.ad.txt` and the letter follows on that pass.
+2. The ad (`ad.mjs`): text he pasted for the role wins, else the board's public API (Greenhouse, Ashby, Lever, SmartRecruiters), a company careers page showing a Greenhouse job (`?gh_jid=`), or a page's JSON-LD job posting. No model reads a web page. **No ad, no letter**: the post asks him to paste the ad (a message or a text file), the listing gets `letter_needs_ad`, and his next long message there (text, or a message.txt) is saved as `jobs/letters/<id>.ad.txt` and the letter follows on that pass. The same goes for a later request that needs the ad (application answers, a recruiter email): the writer answers NO_AD, the post asks for the ad, the request waits in `letter_ad_request`, and it runs by itself once he pastes the ad, even on a role that already has a letter.
 3. The writer (`writer.mjs`) gets `<resume>` and `<connects>` as text (`history.mjs`), the request, the role facts and the ad. Visa line: "I would need visa sponsorship to work in <country>"; the green card only for a US-only role (Bear: the goal is to leave the US). Roles in Germany get a no-contractions tone line.
    - `fable`: the gateway has no Claude Code, so `cli-bridge.mjs` writes `jobs/letters/queue/<id>.request.json`; the host unit `bearnoby-letters-writer.path` starts `scripts/letters-writer.py`, which runs `claude -p --model fable` with no tools, no MCP, no settings, in an empty folder, and writes `<id>.response.json`. Waits up to 12 minutes. A draft takes 15-35 s.
    - `carbon`: OpenRouter, `google/gemini-4-carbon`, about $0.15 a draft.
 4. Checks (`draft.mjs check`, `letter.mjs`): letter format with the caps role line, 200-400 words, no em dashes, no machine-sounding phrase. Nothing about what the letter says. A failing draft goes back up to twice. Then `reword.mjs` (DeepSeek) rewords the paragraphs; kept only if it still passes.
-5. The draft is posted in the role's post with its notes (where each fact came from), word count and "Written by Fable." (or Gemini Carbon). His replies, in order: "good"/"approved" makes the PDF (`finalize.mjs`, `build.mjs`); a pasted letter ("Dear ...", 120+ words) becomes the PDF verbatim; any other note goes to the writer to revise, or to write application answers, or is ignored.
+5. The draft is posted in the role's post with its notes (where each fact came from), word count and "Written by Fable." (or Gemini Carbon). His replies, in order: "good"/"approved" makes the PDF (`finalize.mjs`, `build.mjs`); a pasted letter ("Dear ...", 120+ words) becomes the PDF verbatim; any other note goes to the writer to revise, or to write application answers, or is ignored, and an ignored message gets 👀 so it never looks lost. A text file on his message (Discord turns a paste over 2,000 characters into message.txt) is read as part of it.
 
 ## Files
 
@@ -36,7 +36,7 @@ Writes a cover letter for a role on the [[entities/systems/job-board|job board]]
 - Repo `jobs/bearnice-taps.yaml` (the `letters` handler). Her skill `job-scout` says letters aren't hers, except switching the writer when Bear asks.
 - Her workspace: `config/letters.json` (`{"writer": "fable"}` or `"carbon"`; read on every call), `jobs/letters/<id>.md` (draft; `.orig.md` before the reword, `.opus.md` on letters from before 14 Nov; `.notes.md` the writer's notes; `.ad.txt` an ad he pasted), `jobs/letters/queue/` (requests in flight, normally empty), `jobs/letters/pdf/`, `jobs/letters/spend.jsonl`, `jobs/sources/connects/*.pdf` (15 Connects, 2017-10 to 2024-12, named by date), `jobs/sources/resume-2026-swe.pdf` / `-tpm.pdf` (picked by the listing's `resume`), `config/letterhead.json`.
 - No longer read by the writer (kept): `jobs/sources/cover-letters.md`, `jobs/letters/style.md`, `jobs/interview-stories.md`, `jobs/sources/me/about-me.json` (the `/me/` page).
-- `seen.json` fields: `letter`, `letter_state` (draft or final), `letter_words`, `letter_drafted_on`, `letter_writer` (fable, carbon, opus or bear), `letter_cursor`, `letter_final`, `letter_pdf`, `letter_pdf_on`, `letter_pdf_message_id`, `letter_failed_on`, `letter_fail_notice`, `letter_needs_ad`.
+- `seen.json` fields: `letter`, `letter_state` (draft or final), `letter_words`, `letter_drafted_on`, `letter_writer` (fable, carbon, opus or bear), `letter_cursor`, `letter_final`, `letter_pdf`, `letter_pdf_on`, `letter_pdf_message_id`, `letter_failed_on`, `letter_fail_notice`, `letter_needs_ad`, `letter_ad_request` (`{id, text}`: his request waiting for the ad).
 - Env: `OPENROUTER_API_KEY` (Carbon and the reword), `LETTERS_WRITER` (overrides the setting), `LETTERS_CARBON_MODEL`, `LETTERS_REWORD_MODEL`, `LETTERS_REWORD=off`, `LETTERS_QUEUE`, `LETTERS_CLI_WAIT_MS`, `LETTERHEAD`, `LETTERS_WORKSPACE`, `LETTERS_SPEND_LOG`, `JOB_BOARD_SEEN`, `JOB_BOARD_OWNER`. Host: `CLAUDE_BIN` (default `/root/.local/bin/claude`, signed in to Bear's subscription).
 
 ## Jobs
@@ -68,6 +68,7 @@ Writes a cover letter for a role on the [[entities/systems/job-board|job board]]
 
 ## Change log
 
+- 2026-11-23 build/15-discord-read-access (`544180e`, deployed 23 Nov): a request that needs the ad waits for it and runs when he pastes it (`letter_ad_request`); text attachments are part of his message; 👀 on a message the writer ignores. Fixes the IKEA post of 20 Nov, where his pasted ad was read as a note and ignored.
 - 2026-11-13 build/10-cover-letter-writer-overhaul (`bf172c5`, deployed 13 Nov): whole history in (resume and 15 Connects), rulebook and old letters, style notes and `/me/` out; Fable via Claude Code on the host (queue + `bearnoby-letters-writer`) or Gemini Carbon, switched in `config/letters.json`; Anthropic API no longer used; checks cut to format, 200-400 words, dashes and tells; always the full ad, asks him to paste it; visa line "would need visa sponsorship", green card only for US-only roles.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and read-only server checks.
 - 2026-11-10 Became the `letters` handler of `bearnice-taps`, replacing `bearnice-letters` (deployed 11 Nov, `45ce147`); cost logged to `spend.jsonl`; ad read from the board's API, no ad no letter; DeepSeek reword; Bear's `/me/` notes feed the writer; the writer sells rather than restating the CV.

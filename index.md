@@ -3,10 +3,10 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 106
+- Total pages: 107
 - Claims: 0
 - Sources: 56
-- Entities: 23
+- Entities: 24
 - Concepts: 8
 - Syntheses: 9
 - Reports: 10
@@ -81,6 +81,7 @@
 - [[entities/places/stuttgart-airport|Stuttgart Airport (STR)]]
 - [[entities/systems/backups|System: backups]]
 - [[entities/systems/cover-letters|System: cover letters]]
+- [[entities/systems/discord-access|System: Discord access]]
 - [[entities/systems/events-radar|System: events radar]]
 - [[entities/systems/gig-radar|System: gig radar]]
 - [[entities/systems/heartbeat|System: heartbeat]]

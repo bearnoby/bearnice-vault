@@ -8,7 +8,7 @@ aliases:
   - systems index
 sourceIds:
   - repo:docs/VAULT.md
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-23T21:00:00.000Z
 ---
 
 # Bearnice's systems
@@ -39,6 +39,7 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 - [[entities/systems/backups|Backups]]: nightly push of her workspace to a private repo. `bearnoby-memory-backup.timer`.
 - [[entities/systems/ops-report|Ops report]]: the hourly health report, `/ops/`, alerts in #mod-updates. `bearnoby-ops-report.timer`.
 - [[entities/systems/website|Website]]: her site, publishing, the `/me/` notes endpoint. No job of its own.
+- [[entities/systems/discord-access|Discord access]]: what she can read (`discord_read`) and do (`message` tool) on Discord herself. No job of its own.
 
 ## Keeping the notes
 
@@ -49,6 +50,7 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 
 ## Change log
 
+- 2026-11-23 build/15-discord-read-access: Discord access note added.
 - 2026-11-11 Notes started (V3): this page and the job feed, job board and cover letters notes.
 
 ## Notes
@@ -61,6 +63,7 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 
 - [[entities/systems/backups|System: backups]]
 - [[entities/systems/cover-letters|System: cover letters]]
+- [[entities/systems/discord-access|System: Discord access]]
 - [[entities/systems/events-radar|System: events radar]]
 - [[entities/systems/gig-radar|System: gig radar]]
 - [[entities/systems/heartbeat|System: heartbeat]]
@@ -70,5 +73,4 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 - [[entities/systems/morning-brief|System: morning brief]]
 - [[entities/systems/ops-report|System: ops report]]
 - [[entities/systems/runway|System: runway]]
-- [[entities/systems/taps|System: taps dispatcher]]
 <!-- openclaw:wiki:related:end -->

@@ -11,7 +11,7 @@ sourceIds:
   - repo:heartbeats/assistant.md
   - repo:config/openclaw.json
   - repo:scripts/crons.sh
-updatedAt: 2026-11-11T14:00:00.000Z
+updatedAt: 2026-11-23T21:00:00.000Z
 ---
 
 # System: heartbeat
@@ -52,10 +52,12 @@ Bear's DM only, at most one message per heartbeat. Quiet hours are 23:00 to 09:0
 
 - Instructions change only through a deploy; editing the job's scratch by hand is overwritten by the next one. If no heartbeat job exists yet, `crons.sh` warns and loads them on the next deploy.
 - Her final reply is not delivered. Anything she writes there instead of using the message tool is lost.
+- Until 23 Nov her chat sessions didn't get the message tool at all (her `coding` tool profile dropped it; [[entities/systems/discord-access|Discord access]]). The heartbeat made no message calls on 23 Nov before the fix. If check-ins should reach Bear and don't, look at its real tool calls first.
 - Routine checks, empty inboxes and errors must not go into her memory notes.
 
 ## Change log
 
+- 2026-11-23 build/15-discord-read-access (`e5866d3`): `message` added to `tools.alsoAllow`, so her sessions have the tool these instructions rely on.
 - 2026-11-11 Note written (V3) from the repo at `c076417` and the live job list of 11 Nov.
 - 2026-11-03 Runway and builds added to the heartbeat (`fc6c84f`, `fc3dfce`); DeepSeek direct (`0b63a6f`).
 - 2026-10-24 Heartbeat every 2 hours with real instructions (`11e3921`).
@@ -75,5 +77,6 @@ Bear's DM only, at most one message per heartbeat. Quiet hours are 23:00 to 09:0
 
 ### Related Pages
 
+- [[entities/systems/discord-access|System: Discord access]]
 - [[entities/systems/memory-and-vault|System: memory and vault]]
 <!-- openclaw:wiki:related:end -->

@@ -76,6 +76,7 @@ The check wakes the follow-ups (`openclaw cron run`) when the set of pending wor
 
 - [[entities/systems/systems|Bearnice's systems]]
 - [[entities/systems/cover-letters|System: cover letters]]
+- [[entities/systems/discord-access|System: Discord access]]
 - [[entities/systems/job-feed|System: job feed]]
 - [[entities/systems/morning-brief|System: morning brief]]
 - [[entities/systems/runway|System: runway]]

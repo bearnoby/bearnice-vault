@@ -77,5 +77,6 @@ None. Bear reads and edits the vault in Obsidian after a `git pull`; the ops ale
 
 ### Related Pages
 
+- [[entities/systems/discord-access|System: Discord access]]
 - [[entities/systems/heartbeat|System: heartbeat]]
 <!-- openclaw:wiki:related:end -->
