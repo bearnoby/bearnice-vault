@@ -30,5 +30,8 @@ Bear's standing preferences for everything the letters writer writes for him: co
 
 ## Related
 <!-- openclaw:wiki:related:start -->
-- No related pages yet.
+### Referenced By
+
+- [[entities/systems/systems|Bearnice's systems]]
+- [[entities/systems/cover-letters|System: cover letters]]
 <!-- openclaw:wiki:related:end -->

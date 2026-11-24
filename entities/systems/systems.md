@@ -8,7 +8,7 @@ aliases:
   - systems index
 sourceIds:
   - repo:docs/VAULT.md
-updatedAt: 2026-11-23T21:00:00.000Z
+updatedAt: 2026-11-24T01:00:00.000Z
 ---
 
 # Bearnice's systems
@@ -27,7 +27,7 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 
 - [[entities/systems/job-feed|Job feed]]: jobs found, graded and carded in #job-hunt. Job `bearnice-job-sources`.
 - [[entities/systems/job-board|Job board]]: taps to statuses, the #job-board forum, follow-ups, the job hunt page. Jobs `bearnice-taps`, `bearnice-job-board-followups`.
-- [[entities/systems/cover-letters|Cover letters]]: letters on request in board posts, written by Fable (Claude Code) or Gemini Carbon from his resume, Connects and the ad; PDFs on his letterhead. Job `bearnice-taps`, host unit `bearnoby-letters-writer`.
+- [[entities/systems/cover-letters|Cover letters]]: letters on request in board posts, written by Fable (Claude Code) or Gemini Carbon from his resume, Connects and the ad; PDFs on his letterhead. Jobs `bearnice-taps`, `bearnice-letters-wake`, host unit `bearnoby-letters-writer`; his taste rules in [[concepts/letter-taste|Letter taste]].
 - [[entities/systems/gig-radar|Gig radar]]: one living card per band in #gig-radar, on-sale reminders. Jobs `bearnice-gig-radar-scan`, `bearnice-taps`.
 - [[entities/systems/events-radar|Events radar]]: what's on in the next 7 days, cards in #events-radar. Jobs `bearnice-events-radar`, `bearnice-events-weekend`, `bearnice-taps`.
 - [[entities/systems/runway|Runway]]: where Bear will be, his stay clocks, travel decisions. Job `bearnice-runway`.
@@ -50,6 +50,7 @@ One note per system Bearnice runs: what it does, its files, jobs and channels, h
 
 ## Change log
 
+- 2026-11-24 build/17-letters-adhoc-and-speed: cover letters line names the wake job and the taste page.
 - 2026-11-23 build/15-discord-read-access: Discord access note added.
 - 2026-11-11 Notes started (V3): this page and the job feed, job board and cover letters notes.
 
